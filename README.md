@@ -30,8 +30,8 @@ Sigue estos pasos para levantar el entorno utilizando contenedores distribuidos:
 
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
-   cd tu-repositorio
+   git clone [https://github.com/kheredia04/SGPedidos.git](https://github.com/kheredia04/SGPedidos.git)
+   cd SGPedidos
 
 ## Listado de Endpoints para Pruebas
 
