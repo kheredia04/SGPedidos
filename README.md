@@ -32,6 +32,10 @@ Sigue estos pasos para levantar el entorno utilizando contenedores distribuidos:
    ```bash
    git clone [https://github.com/kheredia04/SGPedidos.git](https://github.com/kheredia04/SGPedidos.git)
    cd SGPedidos
+2. **Configurar el archivo de entorno:**
+   Crea una copia del archivo de configuración inicial:
+   ```bash
+   cp .env.example .env
 
 ## Listado de Endpoints para Pruebas
 
