@@ -1,0 +1,293 @@
+{
+  "info": {
+    "_postman_id": "2bc578bd-2172-46ac-8a65-b31f02a76340",
+    "name": "API GestionPedidos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "11789356",
+    "_collection_link": "https://go.postman.co/collection/11789356-2bc578bd-2172-46ac-8a65-b31f02a76340?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Order",
+      "item": [
+        {
+          "name": "GetListOrderForAuthUser",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{gestionpedidos}}api/orders",
+              "host": [
+                "{{gestionpedidos}}api"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "SeeOrderWithProductAndItems",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{gestionpedidos}}api/orders/2",
+              "host": [
+                "{{gestionpedidos}}api"
+              ],
+              "path": [
+                "orders",
+                "2"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CancelOrder",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "{{gestionpedidos}}api/orders/2/cancel",
+              "host": [
+                "{{gestionpedidos}}api"
+              ],
+              "path": [
+                "orders",
+                "2",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "CreateOrdWithItems",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"items\": [\r\n        {   \r\n            \"product_id\": 1,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_id\": 11,\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{gestionpedidos}}api/orders",
+              "host": [
+                "{{gestionpedidos}}api"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Kevin\",\r\n    \"email\": \"kevinh@example.com\",\r\n    \"password\": \"segura1230\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{gestionpedidos}}api/auth/register",
+              "host": [
+                "{{gestionpedidos}}api"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Login",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{access_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Kevin\",\r\n    \"email\": \"kevinh@example.com\",\r\n    \"password\": \"segura1230\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{gestionpedidos}}api/auth/login",
+              "host": [
+                "{{gestionpedidos}}api"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "gestionpedidos",
+      "value": ""
+    },
+    {
+      "key": "access_token",
+      "value": ""
+    }
+  ]
+}
