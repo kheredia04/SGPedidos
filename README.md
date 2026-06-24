@@ -43,11 +43,6 @@ La API cuenta con los siguientes endpoints estructurados. Todos los endpoints de
 | `POST` | `/api/auth/register` | Registro de un nuevo usuario | No |
 | `POST` | `/api/auth/login` | Inicio de sesión (Retorna el Bearer Token) | No |
 
-### Productos
-| Método | Endpoint | Descripción | Auth | Cache |
-| :--- | :--- | :--- | :--- | :--- |
-| `GET` | `/api/products` | Listar todos los productos disponibles | Sí | ⚡ Sí (5 min) |
-
 ### Órdenes / Pedidos
 | Método | Endpoint | Descripción | Auth | Middleware / Reglas |
 | :--- | :--- | :--- | :--- | :--- |
